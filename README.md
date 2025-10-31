@@ -1,6 +1,6 @@
 # Veeam MCP Chat Client
 
-A thick desktop application that connects to existing MCP servers and multiple AI models, providing a unified chat interface, tool integration, and artifact rendering for Veeam workflows.
+The Veeam MCP Chat Client community edition — an experimental front-end to connect, visualize, and extend Veeam MCP integrations faster connects to existing MCP servers and multiple AI models, providing a unified chat interface, tool integration, and artifact rendering for Veeam workflows.
 
 ## 🎯 Overview
 
