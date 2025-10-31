@@ -1,0 +1,50 @@
+# Example configuration file for Veeam MCP Chat Client
+# Copy this to config.yaml and fill in your API keys
+
+llm_providers:
+  openai:
+    api_key: ${OPENAI_API_KEY}  # Set via environment variable
+    base_url: "https://api.openai.com/v1"
+    model: "gpt-4-turbo-preview"
+    temperature: 0.7
+    max_tokens: null
+    timeout: 30
+
+  anthropic:
+    api_key: ${ANTHROPIC_API_KEY}  # Set via environment variable
+    base_url: "https://api.anthropic.com"
+    model: "claude-3-5-sonnet-20241022"
+    temperature: 0.7
+    max_tokens: 4096
+    timeout: 30
+
+  ollama:
+    base_url: "http://localhost:11434"
+    model: "llama2"
+    temperature: 0.7
+    timeout: 30
+
+mcp_servers:
+  veeam:
+    command: "node"
+    args: ["path/to/veeam-mcp-server"]
+    env: {}
+
+  wazuh:
+    command: "python"
+    args: ["path/to/wazuh-mcp"]
+    env: {}
+
+  servicenow:
+    command: "python"
+    args: ["path/to/servicenow-mcp"]
+    env:
+      SNOW_INSTANCE: "${SERVICENOW_INSTANCE}"
+      SNOW_USERNAME: "${SERVICENOW_USERNAME}"
+      SNOW_PASSWORD: "${SERVICENOW_PASSWORD}"
+
+# Application settings
+app:
+  debug: false
+  log_level: "INFO"
+
